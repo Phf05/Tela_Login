@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/*mobile first*/
+
+/*variaveis*/
+:root {
+    --cyan: #49a09d;
+    --purple: #5f2c82;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;/*borda fazendo parte do espaço e não estando por fora dele*/
+}
+
+body,html {
+    background-color:var(--purple) ;
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    background-color: white;
+    width: 250px;
+    height: 515px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450); /*0px para os lados 10px de espalhamento*/
+
+    overflow: hidden; /*aredondamento do que estiver fora da borda */
+
+    transition: width 0.3s, height 0.3s; /*transição das mudanças de larguras e alturas */
+    transition-timing-function: ease;/*para suavisar as transições*/
+
+    transform: translate(-50%, -50%); 
+}
+
+#login > #img {
+    display: block; 
+    background: var(--purple) url('https://images.pexels.com/photos/20503046/pexels-photo-20503046/free-photo-of-mar-cidade-meio-urbano-ferias.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    height: 200px;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-position: bottom center;
+}
+
+#login > #formulario {
+    display: block;
+    padding: 10px;
+}
+
+#formulario > h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+#formulario > p {
+    font-size: 0.8em;
+}
+
+.campo {
+    display: block;
+    font-size: 9px;
+    background-color: #5f2c82;
+    border: 2px solid  #5f2c82;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+    padding: 4px;
+}
+
+.campo > span {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+.campo > input {
+    background-color: #93e2e0;
+    font-size: 1em;
+    width: calc(100% - 45px); 
+    height: 130%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-5px);/*obs: sempre coloque as transformações, translações, transições por ultimo */
+    
+}
+
+.campo > input:focus-within { /*focus-wthin(foco dentro), quando estiver digitando no campo input, siga o que tiver abaixo*/
+    background-color: white;
+}
+
+
+form > input[type=submit] { /*referenciando o input do tipo submit q esta dentro de form*/
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: var(--cyan);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+    background-color: #317a78;
+}
+
+.botao{
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #49a09d;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+
+}
+
+form > .botao > span {
+ color: #317a78;
+}
+
+.botao:hover {
+    background-color: #266462;
+}
+
+#esqueci-senha-logo {
+    transform: translatey(8px);
+}

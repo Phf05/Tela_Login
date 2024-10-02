@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/*
+Typical Device Breakpoints
+ex:
+pequenas telas: até 600px
+celular: de 600px até 768px
+tablet: de 768px até 992px
+desktop: de 992px até 1200px
+tv, grandes telas: acima de 1200px
+*/
+
+@media screen and (min-width:760px) and (max-width: 992px) { /*tablets*/
+    body {
+        background-image: linear-gradient(to top,
+        var(--cyan), var(--purple));
+    }
+
+    #login {
+        width: 80vw;
+        height: 280px;
+        
+    }
+
+    /*agora aquele display block do outro estilo vai ser util, fazeremos as divs q estao em cima e em baixo, ficarem uma do lado da outra.*/
+    #login > #img {
+        float: left;
+        width: 30%;
+        height: 100%;
+
+    }
+
+    #login > #formulario {
+        float: right;
+        width: 70%;
+    }
+
+    .campo {
+        font-size: 15px;
+    }
+
+    .campo > input {
+        transform: translatey(-15px);
+    }
+    
+}
+
+@media screen and (min-width:992px) {
+    body {
+        background-image: linear-gradient(to top, var(--cyan), var(--purple));
+    }
+    #login {
+        width: 950px;
+        height: 350px;
+    }
+
+    #login > #img {
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+
+    #login > #formulario {
+        float: left;
+        width: 50%;
+    }
+
+    #formulario > h1 {
+        font-size: 2em;
+    }
+
+    #formulario > p {
+        font-size: 1.2em;
+        margin: 20px 0px;
+    }
+
+    .campo {
+        font-size: 15px;
+    }
+
+    .campo > input {
+        transform: translatey(-15px);
+    }
+}
